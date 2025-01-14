@@ -1,0 +1,224 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #a0a0a0;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    background-color: #262626;
+    border: 1px solid #404040;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn-clear {
+    background-color: #4b5563;
+    color: white;
+  }
+  
+  .btn-save {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal-content {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 1.5rem;
+      width: 95%;
+      margin: 1rem;
+    }
+  
+    .modal-header h2 {
+      font-size: 1.25rem;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .form-actions button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .modal-content {
+      padding: 0.75rem;
+      width: 100%;
+      margin: 0.25rem;
+    }
+  
+    .modal-header h2 {
+      font-size: 1rem;
+    }
+  
+    .form-group label {
+      font-size: 0.75rem;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.35rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (min-width: 361px) and (max-width: 375px) {
+    .modal-content {
+      padding: 1rem;
+      margin: 0.35rem;
+    }
+  
+    .modal-header h2 {
+      font-size: 1.1rem;
+    }
+  
+    .form-group label {
+      font-size: 0.8rem;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.4rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (min-width: 376px) and (max-width: 720px) {
+    .modal-content {
+      padding: 1.25rem;
+      margin: 0.5rem;
+    }
+  
+    .modal-header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .form-group label {
+      font-size: 0.85rem;
+    }
+  }

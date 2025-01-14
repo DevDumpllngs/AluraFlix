@@ -1,0 +1,279 @@
+.video-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover .video-overlay {
+  opacity: 1;
+}
+
+.video-info {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.video-description {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-metadata {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  color: #a0a0a0;
+  font-size: 0.8rem;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.video-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-edit {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.video-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #2563eb;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.carousel-container .slick-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-container .slick-slide {
+  padding: 0 0.5rem;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.prev-arrow {
+  left: -20px;
+}
+
+.next-arrow {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .video-card {
+    margin: 0.5rem 0;
+  }
+
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .video-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .video-metadata {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .video-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .video-card {
+    margin: 0.25rem 0;
+  }
+
+  .video-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .video-description {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-metadata {
+    font-size: 0.7rem;
+    gap: 0.25rem;
+  }
+
+  .video-duration {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+
+  .btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+  .video-card {
+    margin: 0.35rem 0;
+  }
+
+  .video-title {
+    font-size: 0.9rem;
+  }
+
+  .video-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .video-metadata {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 720px) {
+  .video-card {
+    margin: 0.4rem 0;
+  }
+
+  .video-title {
+    font-size: 0.95rem;
+  }
+
+  .video-description {
+    font-size: 0.85rem;
+  }
+
+  .video-metadata {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 0.45rem 0.9rem;
+  }
+}
