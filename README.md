@@ -31,6 +31,6 @@ El propósito de AluraFlix es facilitar el acceso a recursos educativos en tecno
 ## Ejemplos de Uso
 - Para agregar un nuevo video, dirígete a la sección "Agregar Video" y completa el formulario. 🆕
 - Puedes editar o eliminar videos desde la lista de videos en la página principal. ✏️🗑️
-- (https://github.com/DevDumpllngs/AluraFlix/blob/master/captura.png)
+- [Interfaz](https://github.com/DevDumpllngs/AluraFlix/blob/master/captura.png)
 
 ¡Disfruta aprendiendo con AluraFlix! 🎉
