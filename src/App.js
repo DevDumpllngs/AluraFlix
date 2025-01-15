@@ -7,7 +7,6 @@ import NewVideo from './components/NewVideo/NewVideo';
 import { getVideos, createVideo, updateVideo, deleteVideo } from './services/api';
 import './styles/index.css';
 
-// Componente Home separado para manejar la página principal
 const Home = ({ videos, onDelete, onUpdate }) => {
   return (
     <>
@@ -37,7 +36,6 @@ const Home = ({ videos, onDelete, onUpdate }) => {
   );
 };
 
-// Componente VideoPlayer para la página individual de video
 const VideoPlayer = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -71,7 +69,6 @@ const VideoPlayer = () => {
   );
 };
 
-// Componente AppContent para manejar el contenido dentro del Router
 const AppContent = () => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -153,7 +150,6 @@ const AppContent = () => {
   );
 };
 
-// Componente principal App
 function App() {
   return (
     <Router>

@@ -7,7 +7,7 @@
   background-attachment: fixed;
   padding-top: 5rem;
   position: relative;
-  display: block; /* Cambiamos el display por defecto a block */
+  display: block; 
 }
 
 .banner::after {
